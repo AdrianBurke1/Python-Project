@@ -7,6 +7,15 @@ toaster = ToastNotifier()
 title = input("\nTitle of Remainder: ")
 msg = input("Message: ")
 minutes = float(input("How Many Minutes: "))
+
+seconds = minutes * 60
+
+print("\nRemainder Set Successfully!\n")
+time.sleep(seconds)
+toaster.show_toast(title,msg, duration=10, threaded=True)
+
+while toaster.notification_activate:
+    time.sleep(0.1)
 # # Total workday duration in seconds (8 hours)
 # WORKDAY_DURATION = 8 * 60 * 60
 # # Break interval in seconds (e.g., every 1 hour)
