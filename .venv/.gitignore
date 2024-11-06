@@ -1,0 +1,3 @@
+*myenv
+*.venv
+*_pycache_
